@@ -3,7 +3,7 @@ import { SrvRecord } from "dns";
 export interface Moment{
   id?: number,
   title: string,
-  desciption: string,
+  description: string,
   image:string,
   created_at?:string,
   updated_at?:string,
