@@ -1,4 +1,4 @@
-<form  (ngSubmit)="onSubmit()" [formGroup]="commentForm" #formDir="ngForm">
+
 <div *ngIf="moment" class="moment">
   <h1>{{moment.title}}</h1>
   <img src="{{baseApiUrl}}uploads/{{moment.image}}" alt="">
@@ -30,7 +30,7 @@
     </ng-template>
     <div  class="comment-form">
       <h3>Deixe um comentário</h3>
-      <form [formGroup]="commentForm"  #formDir="ngForm" (ngSubmit)="onSubmit()">
+      <form [formGroup]="commentForm"  #formDir="ngForm" (ngSubmit)="onSubmit(formDir)">
         <div class="form-group">
           <label for="text">Comentário:</label>
           <textarea formControlName="text" placeholder="O que você quer comentar?"  required></textarea>
@@ -49,4 +49,3 @@
       </form>
     </div>
 </div>
-</form>
